@@ -72,6 +72,34 @@ DockerSlim creates a .json report file named `slim.report.json`
 
 ### Examine the DockerSlim xray results
 
+- Basic facts about this container foound in the contaier report
+
+Created date = 2/1/2019  
+Image Size = 69MB  
+Expose Ports = 3000/TCP  
+
+From the slim.report.json file
+
+```JSON
+  "source_image": {
+    "id": "sha256:602502213c4a3e53ed290235ac955eac6fecd77808942b0e962e83946a62ab70",
+    "name": "gerardojunior/nuxtjs:latest",
+    "size": 68552646,
+    "size_human": "69 MB",
+    "create_time": "2019-02-01T04:21:20Z",
+    "all_names": [
+      "gerardojunior/nuxtjs:latest"
+    ],
+    "docker_version": "18.03.1-ee-3",
+    "architecture": "amd64",
+    "user": "node",
+    "exposed_ports": [
+      "3000/tcp"
+    ]
+  }
+
+```
+
 
 
 
