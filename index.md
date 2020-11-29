@@ -101,6 +101,57 @@ From the slim.report.json file
 ```
 
 
+- Examine the container layers information by DockerFile command in the xray report
+
+The report file contains a listing ("image_stack label") of the docker image layers ordered by layer detailing  Dockerfile command(s) that contributed to each layer. 
+
+Find the ``image_stack:`` array in the slim.report.json file. 
+
+This container contains a single image. Each Dockerfile command is listed in the ``"instructions":`` array. In the snippet below notice that the "ADD" instruction contibuted to ``"layer_index": 0,``. Peruse the report to find the total number if layer indices. This container has a total of 9 layers.
+
+```JSON
+
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:602502213c4a3e53ed290235ac955eac6fecd77808942b0e962e83946a62ab70",
+      "full_name": "gerardojunior/nuxtjs:latest",
+      "repo_name": "gerardojunior/nuxtjs",
+      "version_tag": "latest",
+      "raw_tags": [
+        "gerardojunior/nuxtjs:latest"
+      ],
+      "create_time": "2019-02-01T04:21:20Z",
+      "new_size": 68552646,
+      "new_size_human": "69 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2018-12-21T00:21:29Z",
+          "is_nop": true,
+          "local_image_exits": false,
+          "layer_index": 0,
+          "layer_id": "5491dce778832e33c284cd8185100e76d6daa18f8cbc32458c706776894127fc",
+          "layer_fsdiff_id": "sha256:7bff100f35cb359a368537bb07829b055fe8e0b1cb01085a3a628ae9c187c7b8",
+          "size": 4413428,
+          "size_human": "4.4 MB",
+          "params": "file:2ff00caea4e83dfade726ca47e3c795a1e9acb8ac24e392785c474ecf9a621f2 in /",
+          "command_snippet": "ADD file:2ff00caea4e83dfade726ca47e3c795a1e9...",
+          "command_all": "ADD file:2ff00caea4e83dfade726ca47e3c795a1e9acb8ac24e392785c474ecf9a621f2 /",
+          "target": "/",
+          "source_type": "file"
+        },
+      
+```
+
+The most interesting layers in this container are:
+
+
+**Layer 0**
+
+
+
+
 
 
 
