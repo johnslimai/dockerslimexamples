@@ -344,7 +344,7 @@ Layer 7 (layer listing) snippet showing the file the nuxt.js entrypoint shell sc
         },
 ```
 
-From this analysis its clear this container is primarily composed of:
+From this analysis, this container is primarily composed of:
 
 - Remnants of Alpine Linux including the busybox toolkit
 - Node.js and related packages
@@ -352,6 +352,6 @@ From this analysis its clear this container is primarily composed of:
 - Scripts and other tools to configure nuxt.js and set the entry point to invoke nuxt. 
 
 
-A graphical view of this container shows the same.
+
 
 
