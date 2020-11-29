@@ -72,11 +72,11 @@ DockerSlim creates a .json report file named `slim.report.json`
 
 ### Examine the DockerSlim xray results
 
-- Basic facts about this container foound in the contaier report
+- **Basic facts about this container found in the contaier report**
 
 Created date = 2/1/2019  
 Image Size = 69MB  
-Expose Ports = 3000/TCP  
+Exposed Ports = 3000/TCP  
 
 From the slim.report.json file
 
@@ -100,7 +100,7 @@ From the slim.report.json file
 
 ```
 
-- Exploring the container's layers listed in the xray report
+- **Exploring the container's layers listed in the xray report**
 
 The report file contains a listing ("image_stack label") of the docker image layers ordered by layer detailing  Dockerfile command(s) that contributed to each layer. 
 
