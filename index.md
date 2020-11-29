@@ -14,7 +14,7 @@ Note: This example was developed on macOs
 ![]({{site.baseurl}}//dockerslim-folder.png)
 
 
-- run DockerSlim to check if it's working. 
+- Run DockerSlim to check if it's working. 
 
 Type `docker-slim help` into a terminal window.
 
@@ -28,7 +28,16 @@ Type `docker-slim` into a terminal window then type help at the >>> prompt
 
 ![]({{site.baseurl}}//dockerslim-help-menu.png)
 
+We will be using the xray command for this example
 
- 3. 
+
+ 2. **Find a publically available container on DockerHub to examine with DockerSlim xray**
+ 
+ I decided to use a container with nuxt.js and node.js for this example. Nuxt.js is gaining popularity as a web app framework for vue.js. My team has been working with nuxt.js lately, so its interesting to me.
+ 
+
+ - Open [DockerHub](https://hub.docker.com/) and type `nuxt` into the search bar. you can also just click this link:
+ 
+ [https://hub.docker.com/search?q=nuxt&type=image](https://hub.docker.com/search?q=nuxt&type=image)
 
 
