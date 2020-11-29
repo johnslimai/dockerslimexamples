@@ -5,13 +5,14 @@
 
  1. Install and test DockerSlim
 
- - List item
+ - Download DockerSlim from here:  (https://dockersl.im/)
 
- 
+- Create a directory for Docker
+
 
  3. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk3NDA1MTY5LDg3MTI1NTgzLC02ODYzOT
-QxNDddfQ==
+eyJoaXN0b3J5IjpbLTI0ODQ4MzE3NSw4NzEyNTU4MywtNjg2Mz
+k0MTQ3XX0=
 -->
