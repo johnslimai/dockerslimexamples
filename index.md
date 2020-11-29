@@ -143,7 +143,7 @@ This container has a single image. Each Dockerfile command is listed in the ``"i
       
 ```
 
-The image layer information listed in the ``"image_layers":`` array is useful for understanding what files and consequesntly what software and related files are in the container. The layer informaion is organized by index indicated by the ``"index":`` tag. Search for index 0 in the image layers list. 
+The image layer information listed in the ``"image_layers":`` array is useful for understanding what files and consequently what software and related files are in the container. The layer informaion is organized by index indicated by the ``"index":`` tag. Search for index 0 in the image layers list. 
 
 **Layer 0**
 
@@ -360,12 +360,3 @@ If you want to learn lots more about DockerSlim look here:
 The full details of the DockerSlim xray command can be found here:
 
 [https://github.com/docker-slim/docker-slim#xray-command-options](https://github.com/docker-slim/docker-slim#xray-command-options)
-
-
-
-
-
-
-
-
-
