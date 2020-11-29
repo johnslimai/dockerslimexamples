@@ -53,6 +53,29 @@ From a terminal window type `docker pull gerardojunior/nuxtjs`
 
 Note: You need [Docker Desktop](https://www.docker.com/products/docker-desktop) installed on your host to continue this example.
 
+After the pull command completes. Check to see that the image is loaded using the `docker images` command
+
+![docker-pull.png]({{site.baseurl}}/docker-pull.png)
+
+### Run the DockerSlim xray command on the target container
+
+From a terminal window type `xray --target gerardojunior/nuxtjs:latest`
+
+![dockerslim-xray-command.png]({{site.baseurl}}/dockerslim-xray-command.png)
+
+
+DockerSlim creates a .json report file named `slim.report.json`
+
+![dockerslim-report-directory.png]({{site.baseurl}}/dockerslim-report-directory.png)
+
+
+
+### Examine the DockerSlim xray results
+
+
+
+
+
 
 
 
