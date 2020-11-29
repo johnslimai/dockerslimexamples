@@ -43,3 +43,21 @@ We will be using the xray command for this example
 
 ![docker-hub-search-nuxt.png]({{site.baseurl}}/docker-hub-search-nuxt.png)
 
+I selected the first result for simplicity. Its been donwloaded a bunch of times and seems to have nuxt.js and node.js foundations and a decent GitHub page.
+
+![dockerhub-nuxt-conatiner-target.png]({{site.baseurl}}/dockerhub-nuxt-conatiner-target.png)
+
+- Pull the container using the Docker Pull Command
+
+From a terminal window type `docker pull gerardojunior/nuxtjs`
+
+Note: You need [Docker Desktop](https://www.docker.com/products/docker-desktop) installed on your host to continue this example.
+
+
+
+
+
+
+
+
+
