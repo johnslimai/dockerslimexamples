@@ -3,7 +3,7 @@
 
 ## Example 1: Analyzing a container using the DockerSlim xray command  
 
- ### 1. Download and test DockerSlim
+ ### Download and test DockerSlim
 
  - Download DockerSlim from here: [https://dockersl.im/](https://dockersl.im/)
 
