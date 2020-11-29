@@ -3,7 +3,7 @@
 
 ## Example 1: Analyzing a container using the DockerSlim xray command  
 
- 1. Install and test DockerSlim
+ 1. **Install and test DockerSlim**
 
  - Download DockerSlim from here: [https://dockersl.im/](https://dockersl.im/)
 
@@ -21,6 +21,12 @@ Type `docker-slim help` into a terminal window.
 Note: I added the folder path I created to the /etc/paths file.
 
 ![]({{site.baseurl}}//dockerslim-basic-help.png)
+
+- DockerSlim has a cool menu driven command line too. To try that:
+
+Type `docker-slim` into a terminal window then type help at the >>> prompt
+
+![]({{site.baseurl}}//dockerslim-help-menu.png)
 
 
  3. 
