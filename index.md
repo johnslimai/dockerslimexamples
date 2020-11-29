@@ -222,9 +222,9 @@ Layer 1 contains files associated with node.js. It is the largest layer (56.8MB)
 
 **Layer 2**
 
-Layer 2 containes the files associated with the popular package manager yarn. Yarn is used to configure this container for nuxt.js and also allows developers using this container to easily add and manage packages.
+Layer 2 containes the files associated with the popular package manager [Yarn](https://yarnpkg.com/). Yarn is used to configure this container for nuxt.js and also allows developers using this container to easily add and manage packages.
 
-Note: Package managers are good to include in containers for development but should generally be stripped out of production containers to ensure immutability and adhere to production-ready container best practices.
+Note: Package managers are good to include in containers for development purposes but should generally be stripped out of production containers to ensure immutability and adhere to production-ready container best practices.
 
 ```JSON
 
