@@ -344,11 +344,11 @@ Layer 7 (layer listing) snippet showing the nuxt.js entrypoint shell script (opt
         },
 ```
 
-From this analysis, this container is primarily composed of:
+From this analysis, we can see this container is primarily composed of:
 
 - Remnants of Alpine Linux including the busybox toolkit
 - Node.js and related packages
-- The yarn package manager
+- The Yarn package manager
 - Scripts and other tools to configure nuxt.js and set the entry point to invoke nuxt. 
 
 
