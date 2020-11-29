@@ -28,7 +28,7 @@ Type `docker-slim` into a terminal window then type help at the prompt
 
 ![]({{site.baseurl}}//dockerslim-help-menu.png)
 
-We will be using the xray command for this example
+We use the xray command for this example
 
 
 ### Find a publically available container on DockerHub to examine with DockerSlim xray
