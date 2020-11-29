@@ -36,7 +36,7 @@ We use the xray command for this example
  I decided to use a container with nuxt.js and node.js for this example. Nuxt.js is gaining popularity as a web app framework for vue.js. My team has been working with nuxt.js lately, so its interesting to me.
  
 
- - Open [DockerHub](https://hub.docker.com/) and type `nuxt` into the search bar. you can also just click this link:
+ - Open [DockerHub](https://hub.docker.com/) and type `nuxt` into the search bar. You can also just click this link:
  
  [https://hub.docker.com/search?q=nuxt&type=image](https://hub.docker.com/search?q=nuxt&type=image)
 
