@@ -301,6 +301,9 @@ Layer 6 (command listing) snippet showing the ENTRYPOINT command
         },
 ```
 
+
+```JSON
+
 Layer 7 (layer listing) snippet showing the file 
 
   {
@@ -337,7 +340,7 @@ Layer 7 (layer listing) snippet showing the file
           "mod_time": "2019-01-31T23:20:58-05:00",
           "change_time": "0001-01-01T00:00:00Z"
         },
-
+```
 
 
 
