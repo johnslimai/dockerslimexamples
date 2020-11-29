@@ -351,6 +351,20 @@ From this analysis, we can see this container is primarily composed of:
 - The Yarn package manager
 - Scripts and other tools to configure nuxt.js and set the entry point to invoke nuxt. 
 
+### DockerSlim Resources
+
+If you want to learn lots more about DockerSlim look here:
+
+[https://github.com/docker-slim/docker-slim](https://github.com/docker-slim/docker-slim)
+
+The full details of the DockerSlim xray command can be found here:
+
+[https://github.com/docker-slim/docker-slim#xray-command-options](https://github.com/docker-slim/docker-slim#xray-command-options)
+
+
+
+
+
 
 
 
