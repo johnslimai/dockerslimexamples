@@ -24,7 +24,7 @@ Note: I added the folder path I created to the /etc/paths file.
 
 - DockerSlim has a cool menu driven command line. To try that:
 
-Type `docker-slim` into a terminal window then type help at the >>> prompt
+Type `docker-slim` into a terminal window then type help at the prompt
 
 ![]({{site.baseurl}}//dockerslim-help-menu.png)
 
