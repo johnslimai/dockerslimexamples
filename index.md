@@ -106,7 +106,7 @@ The report file contains a listing ("image_stack label") of the docker image lay
 
 Find the ``image_stack:`` array in the slim.report.json file. 
 
-This container contains a single image. Each Dockerfile command is listed in the ``"instructions":`` array. In the snippet below notice that the "ADD" instruction contibuted to ``"layer_index": 0,``. Peruse the report to find the total number if layer indices. This container has a total of 9 layers.
+This container has a single image. Each Dockerfile command is listed in the ``"instructions":`` array. In the snippet below notice that the "ADD" instruction contibuted to ``"layer_index": 0,``. Peruse the report to find the total number if layer indices. This container has a total of 9 layers.
 
 ```JSON
 
