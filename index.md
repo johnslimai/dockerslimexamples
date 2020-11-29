@@ -1,4 +1,5 @@
-## Welcome to GitHub Pages
+
+## Welcome to John's DockerSlim examples
 
 You can use the [editor on GitHub](https://github.com/johnslimai/dockerslimexamples/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
