@@ -301,10 +301,12 @@ Layer 6 (command listing) snippet showing the ENTRYPOINT command
         },
 ```
 
+Layer 7 (layer listing) snippet showing the file the nuxt.js entrypoint shell script (opt/tools/entrypoint-nuxtjs.sh)
+
 
 ```JSON
 
-Layer 7 (layer listing) snippet showing the file 
+
 
   {
       "id": "a38c549dca9e68603ab2a47a06b1cdfe3d9d733f5e29d3efb953e36b9e17d8a9",
