@@ -143,11 +143,11 @@ This container has a single image. Each Dockerfile command is listed in the ``"i
       
 ```
 
-The image layer information listed in the ``"image_layers":`` array is useful for understanding what files and consequesntly what software and files are in the container. The layer informaion is organized by layer index indicated by the ``"index":`` tag. Search for index 0 in the image layers list. 
+The image layer information listed in the ``"image_layers":`` array is useful for understanding what files and consequesntly what software and related files are in the container. The layer informaion is organized by index indicated by the ``"index":`` tag. Search for index 0 in the image layers list. 
 
 **Layer 0**
 
-Seek the ``"top":`` tag and you can view the files contained in layer 0. Layer 0 is comprised of common Linux OS files included for the Alpine base image. 
+Seek the ``"top":`` tag and you can view the files contained in layer 0. Layer 0 is comprised of common Linux OS files from the Alpine base image. 
 
 ```JSON
 "top": [
