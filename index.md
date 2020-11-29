@@ -100,8 +100,7 @@ From the slim.report.json file
 
 ```
 
-
-- Examine the container layers information by DockerFile command in the xray report
+- Exploring the container's layers listed in the xray report
 
 The report file contains a listing ("image_stack label") of the docker image layers ordered by layer detailing  Dockerfile command(s) that contributed to each layer. 
 
@@ -144,20 +143,200 @@ This container contains a single image. Each Dockerfile command is listed in the
       
 ```
 
-The most interesting layers in this container are:
-
+The image layer information listed in the ``"image_layers":`` array is useful for understanding what files and consequesntly what software and files are in the container. The layer informaion is organized by layer index indicated by the ``"index":`` tag. Search for index 0 in the image layers list. 
 
 **Layer 0**
 
+Seek the ``"top":`` tag and you can view the files contained in layer 0. Layer 0 is comprised of common Linux OS files included for the Alpine base image. 
 
+```JSON
+"top": [
+        {
+          "change": "A",
+          "name": "lib/libcrypto.so.43.0.1",
+          "size": 1734840,
+          "mode": 493,
+          "mod_time": "2018-06-14T02:30:35-04:00",
+          "change_time": "0001-01-01T00:00:00Z"
+        },
+        {
+          "change": "A",
+          "name": "bin/busybox",
+          "size": 796312,
+          "mode": 493,
+          "mod_time": "2018-12-06T10:13:58-05:00",
+          "change_time": "0001-01-01T00:00:00Z"
+        },
+        {
+          "change": "A",
+          "name": "lib/ld-musl-x86_64.so.1",
+          "size": 584168,
+          "mode": 493,
+          "mod_time": "2018-06-19T03:48:15-04:00",
+          "change_time": "0001-01-01T00:00:00Z"
+        },
 
+```
 
+**Layer 1**
 
+Layer 1 containes the files associated with node.js. It is the largest layer (56.8MB) and single file (usr/local/bin/node), the node.js executable is 36.4MB
 
+```JSON
 
+    {
+      "id": "eaabbaf2e7fe2603c758103f3f9397a82ea9c1f39e421735753afef370323a1f",
+      "index": 1,
+      "path": "eaabbaf2e7fe2603c758103f3f9397a82ea9c1f39e421735753afef370323a1f/layer.tar",
+      "stats": {
+        "all_size": 56810567,
+        "object_count": 4178,
+        "dir_count": 711,
+        "file_count": 3463,
+        "link_count": 4,
+        "max_file_size": 36468360,
+        "max_dir_size": 0,
+        "deleted_count": 1,
+        "deleted_dir_count": 0,
+        "deleted_file_count": 1,
+        "deleted_link_count": 0,
+        "deleted_size": 0,
+        "added_size": 56786658,
+        "modified_size": 23909
+      },
+      "changes": {
+        "deleted": 1,
+        "added": 4146,
+        "modified": 31
+      },
+      "top": [
+        {
+          "change": "A",
+          "name": "usr/local/bin/node",
+          "size": 36468360,
+          "mode": 493,
+          "mod_time": "2018-12-26T20:40:30-05:00",
+          "change_time": "0001-01-01T00:00:00Z"
+        },
+```
 
+**Layer 2**
 
+Layer 2 containes the files associated with the popular package manager yarn. Yarn is used to configure this container for nuxt.js and also allows developers using this container to easily add and manage packages.
 
+Note: Package managers are good to include in containers for development but should generally be stripped out of production containers to ensure immutability and adhere to production-ready container best practices.
+
+```JSON
+
+      {
+          "change": "A",
+          "name": "opt/yarn-v1.12.3/README.md",
+          "size": 3174,
+          "mode": 420,
+          "mod_time": "2018-11-07T10:13:08-05:00",
+          "change_time": "0001-01-01T00:00:00Z"
+        },
+        {
+          "change": "A",
+          "name": "opt/yarn-v1.12.3/LICENSE",
+          "size": 1355,
+          "mode": 420,
+          "mod_time": "2018-11-07T10:13:08-05:00",
+          "change_time": "0001-01-01T00:00:00Z"
+        },
+        {
+          "change": "M",
+          "name": "root/.gnupg/trustdb.gpg",
+          "size": 1200,
+          "mode": 384,
+          "mod_time": "2018-12-26T20:22:33-05:00",
+          "change_time": "0001-01-01T00:00:00Z"
+        },
+        {
+          "change": "A",
+          "name": "opt/yarn-v1.12.3/bin/yarn",
+          "size": 1025,
+          "mode": 493,
+          "mod_time": "2018-11-07T10:13:08-05:00",
+          "change_time": "0001-01-01T00:00:00Z"
+        }
+
+```
+
+***Layers 6,7 and 8***
+
+Layers 6,7 and 8 contain the container entrypoint definition and the .sh scripts for nuxt.js.
+
+Layer 6 (command listing) snippet showing the ENTRYPOINT command 
+
+```JSON
+{
+          "type": "USER",
+          "time": "2019-01-17T18:19:19Z",
+          "is_nop": true,
+          "local_image_exits": false,
+          "layer_index": 6,
+          "layer_id": "ee754c9068ed8fccbbd95b642f4f4c069d54e94229a0595ce02b91e16c240c03",
+          "layer_fsdiff_id": "sha256:a7f1fa57d58b715c742a983028810777b521e878812e61f26cab0290f967feeb",
+          "size": 0,
+          "params": "node",
+          "command_snippet": "USER node",
+          "command_all": "USER node",
+          "empty_layer": true
+        },
+        {
+          "type": "ENTRYPOINT",
+          "time": "2019-01-17T18:19:19Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exits": false,
+          "layer_index": 6,
+          "layer_id": "ee754c9068ed8fccbbd95b642f4f4c069d54e94229a0595ce02b91e16c240c03",
+          "layer_fsdiff_id": "sha256:a7f1fa57d58b715c742a983028810777b521e878812e61f26cab0290f967feeb",
+          "size": 0,
+          "params": "[\"/bin/sh\",\"/opt/tools/entrypoint.sh\"]",
+          "command_snippet": "ENTRYPOINT [\"/bin/sh\",\"/opt/tools/entrypoint...",
+          "command_all": "ENTRYPOINT [\"/bin/sh\",\"/opt/tools/entrypoint.sh\"]",
+          "empty_layer": true
+        },
+```
+
+Layer 7 (layer listing) snippet showing the file 
+
+  {
+      "id": "a38c549dca9e68603ab2a47a06b1cdfe3d9d733f5e29d3efb953e36b9e17d8a9",
+      "index": 7,
+      "path": "a38c549dca9e68603ab2a47a06b1cdfe3d9d733f5e29d3efb953e36b9e17d8a9/layer.tar",
+      "stats": {
+        "all_size": 180,
+        "object_count": 3,
+        "dir_count": 2,
+        "file_count": 1,
+        "link_count": 0,
+        "max_file_size": 180,
+        "max_dir_size": 0,
+        "deleted_count": 0,
+        "deleted_dir_count": 0,
+        "deleted_file_count": 0,
+        "deleted_link_count": 0,
+        "deleted_size": 0,
+        "added_size": 180,
+        "modified_size": 0
+      },
+      "changes": {
+        "deleted": 0,
+        "added": 1,
+        "modified": 2
+      },
+      "top": [
+        {
+          "change": "A",
+          "name": "opt/tools/entrypoint-nuxtjs.sh",
+          "size": 180,
+          "mode": 420,
+          "mod_time": "2019-01-31T23:20:58-05:00",
+          "change_time": "0001-01-01T00:00:00Z"
+        },
 
 
 
