@@ -3,7 +3,7 @@
 
 ## Example 1: Analyzing a container using the DockerSlim xray command  
 
- ### Download and test DockerSlim
+### Download and test DockerSlim
 
  - Download DockerSlim from here: [https://dockersl.im/](https://dockersl.im/)
 
@@ -31,7 +31,7 @@ Type `docker-slim` into a terminal window then type help at the >>> prompt
 We will be using the xray command for this example
 
 
- ### 2. Find a publically available container on DockerHub to examine with DockerSlim xray
+### Find a publically available container on DockerHub to examine with DockerSlim xray
  
  I decided to use a container with nuxt.js and node.js for this example. Nuxt.js is gaining popularity as a web app framework for vue.js. My team has been working with nuxt.js lately, so its interesting to me.
  
