@@ -1,7 +1,16 @@
 
 # Welcome to John's DockerSlim examples
 
-## Example 1: Analyzing a container using the DockerSlim xray command  
+## Example 1: Analyzing a container using the DockerSlim xray command 
+
+**Pre-requisities to complete this example**
+
+1. Basic knowledge of Linux commands and a terminal
+
+2. Docker Desktop installed on your host machine.
+
+3. A text editor or browser to view .JSON files
+
 
 ### Download and test DockerSlim
 
