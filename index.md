@@ -189,7 +189,7 @@ Seek the ``"top":`` tag and you can view the files contained in layer 0. Layer 0
 
 **Layer 1**
 
-Layer 1 contains files associated with node.js. It is the largest layer (56.8MB) and contains largest single file usr/local/bin/node (36.4MB). This file is the node.js execuatble binary image.
+Layer 1 contains files associated with node.js. It is the largest layer (56.8MB) and contains the largest single file usr/local/bin/node (36.4MB). This file is the node.js execuatble binary image.
 
 ```JSON
 
