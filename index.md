@@ -18,7 +18,7 @@ Note: This example was developed on macOS
 
 Type `docker-slim help` into a terminal window.
 
-Note: I added the folder path I created to the /etc/paths file.
+Note: I added the folder path I created to the /etc/paths file. If the directory where you extracted the binaries is not in your PATH then you'll need to run your docker-slim commands from that directory. You can type ```./dockerslim help``` to run DockerSlim in this case.
 
 ![]({{site.baseurl}}//dockerslim-basic-help.png)
 
