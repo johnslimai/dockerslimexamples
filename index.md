@@ -3,7 +3,7 @@
 
 ## Example 1: Analyzing a container using the DockerSlim xray command 
 
-**Pre-requisities to complete this example**
+### Pre-requisities to complete this example
 
 1. Basic knowledge of Linux commands and a terminal
 
