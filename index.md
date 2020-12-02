@@ -33,7 +33,7 @@ Note: I added the folder path I created to the /etc/paths file. If the directory
 
 - DockerSlim has a cool menu driven command line. To try that:
 
-Type `docker-slim` into a terminal window then type help at the prompt
+Type `docker-slim` into a terminal window then type help at the interactive prompt
 
 ![]({{site.baseurl}}//dockerslim-help-menu.png)
 
@@ -52,7 +52,7 @@ We use the xray command for this example
 
 ![docker-hub-search-nuxt.png]({{site.baseurl}}/docker-hub-search-nuxt.png)
 
-I selected the first result for simplicity. Its been donwloaded a bunch of times and seems to have nuxt.js and node.js foundations and a decent GitHub page.
+I selected the first result for simplicity. It's been downloaded a bunch of times and seems to have nuxt.js and node.js foundations and a decent GitHub page.
 
 ![dockerhub-nuxt-conatiner-target.png]({{site.baseurl}}/dockerhub-nuxt-conatiner-target.png)
 
@@ -81,11 +81,11 @@ DockerSlim creates a .json report file named `slim.report.json`
 
 ### Examine the DockerSlim xray results
 
-- **Basic facts about this container found in the contaier report**
+- **Basic facts about this container found in the xray report**
 
-Created date = 2/1/2019  
+Created date = 2/1/2019 - the image has not been updated in 2 years  
 Image Size = 69MB  
-Exposed Ports = 3000/TCP  
+Exposed Ports = 3000/TCP 
 
 From the slim.report.json file
 
@@ -115,7 +115,7 @@ The report file contains a listing ("image_stack label") of the docker image lay
 
 Find the ``image_stack:`` array in the slim.report.json file. 
 
-This container has a single image. Each Dockerfile command is listed in the ``"instructions":`` array. In the snippet below notice that the "ADD" instruction contibuted to ``"layer_index": 0,``. Peruse the report to find the total number if layer indices. This container has a total of 9 layers.
+This container has a single image. Each Dockerfile command is listed in the ``"instructions":`` array. In the snippet below notice that the "ADD" instruction contibuted to ``"layer_index": 0,``. Peruse the report to find the total number if layer indices. This container has a total of 8 layers.
 
 ```JSON
 
@@ -274,7 +274,7 @@ Note: Package managers are good to include in containers for development purpose
 
 ***Layers 6,7 and 8***
 
-Layers 6,7 and 8 contain the container entrypoint definition and the .sh scripts for nuxt.js.
+Layers 6,7 and 8 include the container entrypoint definition and the .sh scripts for nuxt.js.
 
 Layer 6 (command listing) snippet showing the ENTRYPOINT command 
 
