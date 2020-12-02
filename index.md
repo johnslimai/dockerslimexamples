@@ -276,7 +276,7 @@ Note: Package managers are good to include in containers for development purpose
 
 Layers 6,7 and 8 include the container entrypoint definition and the .sh scripts for nuxt.js.
 
-Layer 6 (command listing) snippet showing the ENTRYPOINT command 
+Layer 6 snippet showing the ENTRYPOINT command 
 
 ```JSON
 {
