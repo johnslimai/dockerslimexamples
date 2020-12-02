@@ -152,7 +152,7 @@ This container has a single image. Each Dockerfile command is listed in the ``"i
       
 ```
 
-The image layer information listed in the ``"image_layers":`` array is useful for understanding what files and consequently what software and related files are in the container. The layer informaion is organized by index indicated by the ``"index":`` tag. Search for index 0 in the image layers list. 
+The image layer information listed in the ``"image_layers":`` array is useful for understanding what files and consequently what software and related files are in the container. The layer information is organized by index indicated by the ``"index":`` tag. Search for index 0 in the image layers list. 
 
 **Layer 0**
 
@@ -231,7 +231,7 @@ Layer 1 contains files associated with node.js. It is the largest layer (56.8MB)
 
 **Layer 2**
 
-Layer 2 containes the files associated with the popular package manager [Yarn](https://yarnpkg.com/). Yarn is used to configure this container for nuxt.js and also allows developers using this container to easily add and manage packages.
+Layer 2 contains the files associated with the popular package manager [Yarn](https://yarnpkg.com/). Yarn is used to configure this container for nuxt.js and also allows developers using this container to easily add and manage packages.
 
 Note: Package managers are good to include in containers for development purposes but should generally be stripped out of production containers to ensure immutability and adhere to production-ready container best practices.
 
