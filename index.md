@@ -1,7 +1,7 @@
 
 # Welcome to John's DockerSlim examples
 
-## Exploring and analyzing a Docker container using the DockerSlim xray command 
+## Explore and analyze a Docker container using the DockerSlim xray command 
 
 ### Pre-requisities to complete this example
 
