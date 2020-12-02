@@ -310,7 +310,7 @@ Layer 6 (command listing) snippet showing the ENTRYPOINT command
         },
 ```
 
-Layer 7 (layer listing) snippet showing the nuxt.js entrypoint shell script (opt/tools/entrypoint-nuxtjs.sh)
+Layer 7 snippet showing the nuxt.js entrypoint shell script (opt/tools/entrypoint-nuxtjs.sh)
 
 
 ```JSON
