@@ -3,7 +3,7 @@
 
 ## Explore and analyze a Docker container using the DockerSlim xray command 
 
-### Pre-requisities to complete this example
+### Prerequisities to complete this example
 
 1. Basic knowledge of Linux commands and a terminal
 
@@ -40,7 +40,7 @@ Type `docker-slim` into a terminal window then type help at the interactive prom
 We use the xray command for this example
 
 
-### Find a publically available container on DockerHub to examine with DockerSlim xray
+### Find a publicly available container on DockerHub to examine with DockerSlim xray
  
  I decided to use a container with nuxt.js and node.js for this example. Nuxt.js is gaining popularity as a web app framework for vue.js. My team has been working with nuxt.js lately, so its interesting to me.
  
@@ -189,7 +189,7 @@ Seek the ``"top":`` tag and you can view the files contained in layer 0. Layer 0
 
 **Layer 1**
 
-Layer 1 contains files associated with node.js. It is the largest layer (56.8MB) and contains the largest single file usr/local/bin/node (36.4MB). This file is the node.js execuatble binary image.
+Layer 1 contains files associated with node.js. It is the largest layer (56.8MB) and contains the largest single file usr/local/bin/node (36.4MB). This file is the node.js executable binary image.
 
 ```JSON
 
